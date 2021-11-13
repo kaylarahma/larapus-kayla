@@ -21,12 +21,6 @@ class BookController extends Controller
         $books = Book::with('author')->get();
         return view('admin.book.index', compact('books'));
 
-        // $book = DB::table('books')
-        //     ->join('authors', 'books.author_id', '=', 'authors.id')
-        //     ->select('title', 'authors.name', 'amount', 'cover')
-        //     ->get();
-        // return view('admin.book.index', compact('book'));
-
     }
 
     /**
@@ -71,20 +65,6 @@ class BookController extends Controller
         $book->amount = $request->amount;
         $book->save();
         return redirect()->route('books.index');
-
-        // $validated = $request->validate([
-        //     'title' => 'required', 'author_id' => 'required', 'amount' => 'required', 'cover' => 'required',
-        // ]);
-
-        // $book = new Book;
-        // $book->title = $request->title;
-        // $book->author_id = $request->author_id;
-        // $book->amount = $request->amount;
-        // $book->cover = $request->cover;
-
-        // $book->save();
-        // return redirect()->route('book.index');
-
     }
 
     /**

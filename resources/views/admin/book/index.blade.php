@@ -18,7 +18,7 @@
             <div class="card">
                 <div class="card-header">
                     Data Buku
-                    <a href="{{route('books.create')}}" class="btn btn-sm btn-outline-primary float-right">Tambah Penulis</a>
+                    <a href="{{route('books.create')}}" class="btn btn-sm btn-outline-primary float-right">Tambah Buku</a>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
